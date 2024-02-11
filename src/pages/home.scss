@@ -1,0 +1,385 @@
+/* Your CSS styles */
+/* Add this CSS to your existing styles or create a new stylesheet */
+.news-cards-container {
+  .news-card{
+    .test{
+
+      font-size: 200px;
+    }
+  }
+
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .box1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .writepost {
+    font-size: 20px;
+    font-weight: bold;
+    .news-tagline {
+      font-family: 'Instrument', sans-serif; /* Use the 'Instrument' font */
+      font-size: 48px; /* Increase font size for emphasis */
+      font-weight: bold;
+      color: #333; /* Dark gray color */
+      text-align: center;
+      margin-bottom: 40px; /* Add some spacing below the tagline */
+      opacity: 0;
+      transform: translateY(50px); /* Start the tagline off-screen */
+      animation: fadeInUp 1s ease-in-out forwards, pulse 2s ease-in-out infinite alternate; /* Animation for entrance effect and pulsating effect */
+    
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    
+      @keyframes pulse {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1.1);
+        }
+      }
+    }
+    
+    
+  }
+  
+  .writebutton {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .separation {
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin-bottom: 20px;
+  }
+  
+  .news-cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .news-card {
+    width: 100%; /* Adjust as needed */
+    margin-bottom: 30px; /* Increased gap */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    transition: transform 0.3s, box-shadow 0.3s; /* Added transition for smooth hover effect */
+    cursor: pointer;
+  }
+  .news-card:hover{
+    transform: translateY(-5px); /* Move card up slightly on hover */
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover for depth effect */
+  }
+  
+  .news-image img {
+    width: 40%; /* Adjust as needed */
+    height: auto;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  
+  .news-content {
+    padding: 20px;
+    width: 60%; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .news-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px; /* Increased gap */
+  }
+  .meta-info span{
+    color: #888;
+  }
+  
+  .news-body {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+    max-height:47px ;
+    display: -webkit-box; 
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 2; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+  
+  }
+  
+  .readmore {
+    color: white;
+    background-color: #888; /* Gray color */
+    padding: 10px 0; /* Adjust padding */
+    width: 120px; /* Fixed width */
+    text-align: center; /* Center the text */
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .readmore:hover {
+    background-color: black;
+    color: white;
+  }
+  
+
+.home-title {
+    font-size: 1.5em; /* Increase font size */
+    padding-top: 50px;
+    color: #000;
+    font-family: 'Instrument';
+    font-weight: 750;
+  }
+  
+  .home-title span {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    line-height: 1.2;
+  }
+  
+  .home-title span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120%; /* Increase width of the reveal effect */
+    height: 100%;
+    background: white;
+    animation: a-ltr-after 4s cubic-bezier(.77,0,.18,1) infinite; /* Make the animation slower and loop */
+    transform: translateX(-110%); /* Adjust translateX to match the increased width */
+  }
+  
+  .home-title span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120%; /* Increase width of the reveal effect */
+    height: 100%;
+    background: var(--bg-color); /* Assuming you define --bg-color elsewhere */
+    animation: a-ltr-before 4s cubic-bezier(.77,0,.18,1) infinite; /* Make the animation slower and loop */
+    transform: translateX(0);
+  }
+  
+  .home-title span:nth-of-type(1)::before,
+  .home-title span:nth-of-type(1)::after {
+    animation-delay: 2s; /* Delay the start of animation */
+  }
+  
+  .home-title span:nth-of-type(2)::before,
+  .home-title span:nth-of-type(2)::after {
+    animation-delay: 2.5s; /* Delay the start of animation */
+  }
+  
+  /* New styles to reveal text after animation */
+  .home-title span {
+    opacity: 0; /* Initially hide the text */
+  }
+  
+  @keyframes a-ltr-after {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(101%); }
+  }
+  
+  @keyframes a-ltr-before {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(200%); }
+  }
+  
+  /* Reveal text after animation */
+  .home-title span {
+    animation: reveal-text 4s forwards infinite; /* Make the animation slower and loop */
+  }
+  
+  @keyframes reveal-text {
+    0% { opacity: 0; }
+    90% { opacity: 1; } /* Smooth transition */
+    100% { opacity: 0; }
+  }
+
+  $t: 1s;
+$d: 0.08em;
+$n: 3;
+$e: cubic-bezier(0.860, 0.000, 0.070, 1.000); 
+$front: black;
+$back: rgb(142, 137, 160);
+
+.popout{
+	font-family: Futura, sans-serif;
+	font-weight: 600;
+	font-size: 40px;
+    
+	
+
+	@keyframes ani{
+		0%{
+			transform: translate3d(0,0,0);
+			text-shadow: 0em 0em 0 $back;
+			color: $front;
+		}
+		30%{
+			transform: translate3d(0,0,0);
+			text-shadow: 0em 0em 0 $back;
+			color: $front;
+		}
+		70%{
+			transform: translate3d($d,-$d,0);
+			text-shadow: -$d $d $back;
+			color: $front;
+		}
+		100%{
+			transform: translate3d($d,-$d,0);
+			text-shadow: -$d $d $back;
+			color: $front;
+		}
+	}
+	span{
+		position: relative;
+		display: inline-block;
+		animation: ani $t infinite alternate $e;
+		@for $i from 1 through $n{
+			&:nth-last-child(#{$i}n){ animation-delay: -$t*$i/$n/2;}
+		}
+	}
+	
+}
+
+//BUTTON
+.writebutton {
+    animation: wiggle 2s linear infinite;
+  }
+  
+  /* Keyframes */
+  @keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  }
+  
+  
+
+
+
+
+
+
+@mixin btn-border-drawing($color: #000000, $hover: black, $width: 1px, $vertical: top, $horizontal: left, $duration: 0.25s) {
+    box-shadow: inset 0 0 0 $width $color;
+    color: $color;
+    transition: color $duration $duration/3;
+    position: relative;
+    
+    &::before,
+    &::after {
+      border: 0 solid transparent;
+      box-sizing: border-box;
+      content: '';
+      pointer-events: none;
+      position: absolute;
+      width: 0; height: 0;
+      
+      #{$vertical}: 0; 
+      #{$horizontal}: 0;
+    }
+  
+    &::before {
+      $h-side: if($horizontal == 'left', 'right', 'left');
+      
+      border-#{$vertical}-width: $width;
+      border-#{$h-side}-width: $width;
+    }
+    
+    &::after {
+      $v-side: if($vertical == 'top', 'bottom', 'top');
+      
+      border-#{$v-side}-width: $width;
+      border-#{$horizontal}-width: $width;
+    }
+    
+    &:hover {
+      color: $hover;
+      
+      &::before,
+      &::after {
+        border-color: $hover;
+        transition: border-color 0s, width $duration, height $duration;
+        width: 100%;
+        height: 100%;
+      }
+      
+      &::before { transition-delay: 0s, 0s, $duration; }
+      
+      &::after { transition-delay: 0s, $duration, 0s; }
+    }
+  }
+  
+  .writebutton {
+    @include btn-border-drawing(#000000, #fffffe, 4px, bottom, right);
+  }
+  
+  //=== Button styling, semi-ignore
+  .writebutton {
+    background: none;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    line-height: 1.2;
+    font: 500 2.2rem 'Instrument';
+    padding: 1em 3em;
+    letter-spacing: 0.05rem;
+    
+    &:focus { outline: 0.5px dotted #000000; }
+  }

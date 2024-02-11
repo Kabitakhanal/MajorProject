@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@300;400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lora';
+  }
+  
+  body {
+    background: #ebecf0;
+    font-family: "Open Sans", sans-serif;
+    min-height: 100vh;
+  
+    a {
+      text-decoration: none;
+      color: #172b4d;
+    }
+  
+    h1 {
+      font-family: "Song Myung", serif;
+    }
+  }
+  
+  /* DEFAULT STYLE */
+  :root {
+    font-size: 16px;
+    --card-img-height: 200px;
+  }
+  
+  .card-container {
+    padding-top: 10px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    transition: all 200ms ease-in-out;
+  }
+  
+  .card {
+    align-self: flex-start;
+    position: relative;
+    width: 325px;
+    min-width: 275px;
+    margin: 1.25rem 0.75rem;
+    background: white;
+    transition: all 300ms ease-in-out;
+  
+    .card-img {
+      visibility: hidden;
+      width: 100%;
+      height: var(--card-img-height);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+  
+    .card-img-hovered {
+      --card-img-hovered-overlay: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0)
+      );
+      transition: all 350ms ease-in-out;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      width: 100%;
+      position: absolute;
+      height: var(--card-img-height);
+      top: 0;
+    }
+  
+    .card-info {
+      position: relative;
+      padding: 0.75rem 1.25rem;
+      transition: all 200ms ease-in-out;
+  
+      .card-about {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 0;
+        transition: all 200ms ease-in-out;
+  
+        .card-tag {
+          width: 60px;
+          max-width: 100px;
+          padding: 0.2rem 0.5rem;
+          font-size: 12px;
+          text-align: center;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          background: #505f79;
+          color: #fff;
+  
+          &.News {
+            background: #36b37e;
+          }
+  
+          &.Deals {
+            background: #ffab00;
+          }
+  
+          &.Politics {
+            width: 71px;
+            background: #ff5630;
+          }
+        }
+      }
+  
+      .card-title {
+        z-index: 10;
+        font-size: 1.5rem;
+        padding-bottom: 0.75rem;
+        transition: all 350ms ease-in-out;
+      }
+  
+      .card-creator {
+        padding-bottom: 0.75rem;
+        transition: all 250ms ease-in-out;
+      }
+    }
+  
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0px 15px 35px rgba(227, 252, 239, 0.1),
+        0px 5px 15px rgba(0, 0, 0, 0.07);
+      transform: scale(1.025);
+  
+      .card-img-hovered {
+        --card-img-hovered-overlay: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0.65)
+        );
+        height: 100%;
+      }
+  
+      .card-about,
+      .card-creator {
+        opacity: 0;
+      }
+  
+      .card-info {
+        background-color: transparent;
+      }
+  
+      .card-title {
+        color: #ebecf0;
+        transform: translate(0, 40px);
+      }
+    }
+  }
+  
+  // CARD IMAGES
+  .card-1 {
+    .card-img,
+    .card-img-hovered {
+      background-image: var(--card-img-hovered-overlay),
+        url(https://source.unsplash.com/Qm_n6aoYzDs);
+    }
+  }
+  
+  .card-2 {
+    .card-img,
+    .card-img-hovered {
+      background-image: var(--card-img-hovered-overlay),
+        url(https://source.unsplash.com/C-v1p2DTakA);
+    }
+  }
+  
+  .card-3 {
+    .card-img,
+    .card-img-hovered {
+      background-image: var(--card-img-hovered-overlay),
+        url(https://source.unsplash.com/V0L1LH7qWOQ);
+    }
+  }
+  
+  .card-4 {
+    .card-img,
+    .card-img-hovered {
+      background-image: var(--card-img-hovered-overlay),
+        url(https://source.unsplash.com/zAi2Is48-MA);
+    }
+  }
+
+
+  //IMAGES
+  .containerhome {
+    width:100%;
+    
+    
+    
+    padding-bottom: 0%;
+    display: grid;
+    grid-auto-flow: row;
+    align-items: center;
+    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    
+    
+    grid-template-areas:
+      "Image-1 Image-1 Image2"
+      "Image-1 Image-1 Image-3"
+      "Image-1 Image-1 Image-4";
+  }
+  
+.Image-1 { grid-area: Image-1; }
+.Image2 { grid-area: Image-2; }
+.Image-3 { grid-area: Image-3; }
+.Image-4 { grid-area: Image-4; }
+  
+  .Image-1 {
+    height: 600px;
+    width: 100%;
+    
+    
+  }
+  .Image-2 ,
+  .Image-3 ,
+  .Image-4 {
+    
+    height: 200px;
+    width: 800px;
+    
+   
+  }
+  .Image-1:hover{
+    transition: ease-in 0.2s;
+      cursor: pointer;
+      box-shadow: 0px 15px 35px rgba(227, 252, 239, 0.1),
+        0px 5px 15px rgba(0, 0, 0, 0.07);
+      transform: scale(1.025);
+  }
+  .Image-2:hover{
+    
+    cursor: pointer;
+    box-shadow: 0px 15px 35px rgba(227, 252, 239, 0.1),
+      0px 5px 15px rgba(0, 0, 0, 0.07);
+    transform: scale(1.1);
+}
+.Image-3:hover{
+    
+  cursor: pointer;
+  box-shadow: 0px 15px 35px rgba(227, 252, 239, 0.1),
+    0px 5px 15px rgba(0, 0, 0, 0.07);
+  transform: scale(1.1);
+}
+.Image-4:hover{
+    
+  cursor: pointer;
+  box-shadow: 0px 15px 35px rgba(227, 252, 239, 0.1),
+    0px 5px 15px rgba(0, 0, 0, 0.07);
+  transform: scale(1.1);
+}
+  .image-text {
+    position: absolute;
+    top: 60%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Lora';
+    width: 100%;
+  }
+  .explore{
+    padding-top: 12px;
+    font-size: 25px;
+    font-weight: bolder;
+   font-family: 'Lora';
+   background-color: #ffffff;
+   color: #000000;
+   height: 60px;
+    text-align: left;
+    margin-top: 13px;
+    padding-left: 10px;
+  }
+  
