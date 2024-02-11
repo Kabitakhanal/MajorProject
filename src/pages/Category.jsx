@@ -103,6 +103,7 @@ const Category = () => {
         {currentArticles.map(article => (
           <div className='col-md-4' key={article.id}>
             <Card
+              id={article.id}
               image={article.photo}
               title={article.news_title}
               content={article.news_body}
