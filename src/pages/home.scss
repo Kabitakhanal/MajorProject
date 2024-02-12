@@ -17,46 +17,30 @@
   }
   
   .box1 {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    height:420px;
+  }
+
+  .homeimage {
+    margin-left: 50px;
+    width:70%;
+    height:80%;
   }
   
   .writepost {
     font-size: 20px;
     font-weight: bold;
     .news-tagline {
-      font-family: 'Instrument', sans-serif; /* Use the 'Instrument' font */
+      // font-family: 'Instrument', sans-serif; /* Use the 'Instrument' font */
       font-size: 48px; /* Increase font size for emphasis */
       font-weight: bold;
       color: #333; /* Dark gray color */
       text-align: center;
       margin-bottom: 40px; /* Add some spacing below the tagline */
-      opacity: 0;
-      transform: translateY(50px); /* Start the tagline off-screen */
-      animation: fadeInUp 1s ease-in-out forwards, pulse 2s ease-in-out infinite alternate; /* Animation for entrance effect and pulsating effect */
-    
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(50px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-    
-      @keyframes pulse {
-        from {
-          transform: scale(1);
-        }
-        to {
-          transform: scale(1.1);
-        }
-      }
+      animation: fadeInUp 1s ease-in-out forwards, pulse 2s ease-in-out infinite alternate; /* Animation for entrance effect and pulsating effect */  
     }
     
     
@@ -161,7 +145,7 @@
     font-size: 1.5em; /* Increase font size */
     padding-top: 50px;
     color: #000;
-    font-family: 'Instrument';
+    font-family: 'Poppins';
     font-weight: 750;
   }
   
@@ -280,34 +264,34 @@ $back: rgb(142, 137, 160);
 }
 
 //BUTTON
-.writebutton {
-    animation: wiggle 2s linear infinite;
-  }
+// .writebutton {
+//     animation: wiggle 2s linear infinite;
+//   }
   
-  /* Keyframes */
-  @keyframes wiggle {
-    0%, 7% {
-      transform: rotateZ(0);
-    }
-    15% {
-      transform: rotateZ(-15deg);
-    }
-    20% {
-      transform: rotateZ(10deg);
-    }
-    25% {
-      transform: rotateZ(-10deg);
-    }
-    30% {
-      transform: rotateZ(6deg);
-    }
-    35% {
-      transform: rotateZ(-4deg);
-    }
-    40%, 100% {
-      transform: rotateZ(0);
-    }
-  }
+//   /* Keyframes */
+//   @keyframes wiggle {
+//     0%, 7% {
+//       transform: rotateZ(0);
+//     }
+//     15% {
+//       transform: rotateZ(-15deg);
+//     }
+//     20% {
+//       transform: rotateZ(10deg);
+//     }
+//     25% {
+//       transform: rotateZ(-10deg);
+//     }
+//     30% {
+//       transform: rotateZ(6deg);
+//     }
+//     35% {
+//       transform: rotateZ(-4deg);
+//     }
+//     40%, 100% {
+//       transform: rotateZ(0);
+//     }
+//   }
   
   
 
@@ -325,6 +309,7 @@ $back: rgb(142, 137, 160);
     &::before,
     &::after {
       border: 0 solid transparent;
+      border-radius: 25px;
       box-sizing: border-box;
       content: '';
       pointer-events: none;
@@ -374,7 +359,8 @@ $back: rgb(142, 137, 160);
   .writebutton {
     background: none;
     color: rgb(0, 0, 0);
-    border: none;
+    border: solid;
+    border-radius: 25px;
     cursor: pointer;
     line-height: 1.2;
     font: 500 2.2rem 'Instrument';

@@ -4,7 +4,7 @@ import Classifyimg from "../img/classifynews.jpg";
 import "./home.scss";
 import axios from "axios";
 import { useState, useEffect } from "react";
-
+import homeImage from "../img/news_home.png";
 const Home = () => {
   const navigate = useNavigate();
   const gotowrite = () => {
@@ -39,47 +39,17 @@ const Home = () => {
       <div className="box1">
         <div className="writepost">
           <div className="news-tagline">Classify Your Own News Articles</div>
+ </div>
 
-          <div>
-            <p class="popout">
-              <span>C</span>
-              <span>L</span>
-              <span>A</span>
-              <span>S</span>
-              <span>S</span>
-              <span>I</span>
-              <span>F</span>
-              <span>Y</span>
-              <br></br>
-              <span>Y</span>
-              <span>O</span>
-              <span>U</span>
-              <span>R</span>
-              &nbsp;
-              <span>O</span>
-              <span>W</span>
-              <span>N</span>
-              <br></br>
-              <span>N</span>
-              <span>E</span>
-              <span>W</span>
-              <span>S</span>
-              &nbsp;
-              <span>A</span>
-              <span>R</span>
-              <span>T</span>
-              <span>I</span>
-              <span>C</span>
-              <span>L</span>
-              <span>E</span>
-            </p>
-          </div>
-        </div>
+ <img className="homeimage" src={homeImage} alt="" />
+       
+     
 
-        <button className="writebutton" onClick={gotowrite}>
-          Upload and classify
-        </button>
+        
       </div>
+      <button className="writebutton" onClick={gotowrite}>
+        Classify
+      </button>
       <div className="separation"></div>
       <div className="news-cards-container">
         {articles.map((article, index) => (
@@ -87,7 +57,7 @@ const Home = () => {
             {console.log(articles)}
             <div className="news-card" key={article.id}>
               <div className="news-image">
-                <img src={article.photo} alt={article.news_title} />
+                <img className="imgcard" src={article.photo} alt={article.news_title} />
               </div>
               <div className="news-content">
                 <h2 className="news-title">
