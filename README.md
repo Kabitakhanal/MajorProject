@@ -1,1 +1,2 @@
 # MajorProject
+# Nepali News Classifier
